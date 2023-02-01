@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Spotify-Font';
+    src: url('./spotifyFonts/GothamMedium.ttf') format('truetype');
+  
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Spotify-Font';
+    src: url('./spotifyFonts/GothamBold.ttf') format('truetype');
+  
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Spotify-Font';
+    src: url('./spotifyFonts/GothamBookItalic.ttf') format('truetype');
+  
+    font-weight: normal;
+    font-style: italic;
+  }
+
+#home-page{
+    display: flex;
+    background-color: #0d0d0d;
+    font-family: "SpotifyFont";
+}
