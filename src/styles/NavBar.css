@@ -15,3 +15,17 @@
 .nav-bar-option {
     cursor: pointer;
 }
+
+#spotify-logo{
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 10vw;
+    max-height: 10vh;
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+}

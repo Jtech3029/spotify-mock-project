@@ -1,0 +1,9 @@
+.song-item{
+    background-color: #151515;
+    color: white;
+}
+
+.song-item-image{
+    max-width: 200px;
+    max-height: 200px;
+}

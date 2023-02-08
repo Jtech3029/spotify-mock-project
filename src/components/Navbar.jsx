@@ -1,6 +1,6 @@
+import { getAuth, signOut } from "firebase/auth";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"
-import getSong from "../firebase/getSong";
 import "../styles/NavBar.css"
 
 export default function NavBar() {
@@ -34,13 +34,13 @@ export default function NavBar() {
     const navigate = useNavigate();
 
     return(<div id="nav-bar">
-        <div>
-            <img alt="the logo"></img>
+        <div id="logo">
+            <img alt="the logo" src={require("../imgs/spotify-logo.jpg")} id="spotify-logo"></img>
+            <div>
+                Faketify
+            </div>
         </div>
-        <div className="nav-bar-option" onClick={() => {
-            console.log("hi")
-            getSong().then((audio) => audio.play());
-        }}>
+        <div className="nav-bar-option" onClick={() => navigate("/")}>
         Home
         </div>
         <div className="nav-bar-option" onClick={() => navigate("/search")}>

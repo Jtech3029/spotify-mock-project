@@ -1,7 +1,7 @@
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
-import { app } from "./firebase";
+import { app } from "../firebase/firebase";
 
-export default function getSong() {
+export default function getSong(song) {
     const storage = getStorage(app);
     return new Promise(
       (resolve, reject) => {
