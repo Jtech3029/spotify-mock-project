@@ -21,7 +21,7 @@ export default function Item(props) {
             <div onClick={() => {
                 props.play(props.songUrl);
             }}>
-                <img  alt="a play button" data-testid="play" />
+                <img  alt="a play button" src={require("../imgs/green-play.png")} data-testid="play" className="item-play"/>
             </div>
         </div>
     )

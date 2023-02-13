@@ -1,9 +1,23 @@
 .song-item{
-    background-color: #151515;
+    background-color: #181818;
     color: white;
+    width: 220px;
+    height: 250px;
+    border-radius: 20px;
 }
 
 .song-item-image{
     max-width: 200px;
     max-height: 200px;
+    border-radius: 20px;
+    position: relative;
+    left: 5%;
+    top: 5%;
+}
+
+.item-play{
+    aspect-ratio: 2/1;
+    height: 50px;
+    position: relative;
+    left: 55%;
 }

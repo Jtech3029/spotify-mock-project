@@ -7,6 +7,8 @@ import Authentication from './Authentication';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import Searchbar from './Searchbar';
 import getSong from '../functions/getSong';
+import randomSong from '../functions/randomSong';
+import SignOut from './SignOut';
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -22,12 +24,17 @@ function App() {
     }
   });
 
+  async function finishedSong() {
+   let url = await randomSong();
+   url = url[1].location;
+   play(url);
+  }
   async function play(songURL) {
     if(song) song.pause();
 
     if(songURL) {
       let thisSong = await getSong(songURL);
-      await setSong(thisSong);
+      setSong(thisSong);
       thisSong.play();
     }
     else{
@@ -42,19 +49,19 @@ function App() {
     <Authentication />
     }
     {user &&
-    <div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage play={play} />}/>
-        <Route path='/search' element={<Searchbar />}/>
-      </Routes>
-    </BrowserRouter>
-    {isPlaying &&
-      <PlayBar song={song} play={() => song.play()} pause={() => song.pause()} isPlaying={isPlaying} setIsPlaying={setIsPlaying}/> 
-  } 
-    </div>
+      <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage play={play} />}/>
+          <Route path='/search' element={<Searchbar />}/>
+        </Routes>
+      </BrowserRouter>
+      {isPlaying &&
+        <PlayBar song={song} play={() => song.play()} pause={() => song.pause()} isPlaying={isPlaying} finishedSong={finishedSong} setIsPlaying={setIsPlaying}/> 
+      } 
+      </div>
     }
-
+  <SignOut></SignOut>
     </div>
 
   );

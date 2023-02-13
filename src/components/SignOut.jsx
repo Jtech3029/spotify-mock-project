@@ -4,7 +4,7 @@ export default function SignOut() {
 
 
     return(<div>
-        <button onClick={() => {
+        <button id="sign-out"onClick={() => {
             signOut(getAuth());
         }}>Sign Out</button>
     </div>)
