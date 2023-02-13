@@ -5,7 +5,7 @@ export default function getSong(song) {
     const storage = getStorage(app);
     return new Promise(
       (resolve, reject) => {
-        getDownloadURL(ref(storage, 'gs://faketify-8d4b2.appspot.com/ballroom-extravaganza.mp3'))
+        getDownloadURL(ref(storage, song))
         .then((url) => {
           resolve(new Audio(url));
         })

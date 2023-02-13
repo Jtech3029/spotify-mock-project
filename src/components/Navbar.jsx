@@ -46,14 +46,14 @@ export default function NavBar() {
         <div className="nav-bar-option" onClick={() => navigate("/search")}>
         Search
         </div>
-        <div className="nav-bar-option" onClick={() => navigate("/playlists")}>
+        <div className="nav-bar-option" onClick={() => navigate("/")}>
         Your Playlists
         </div>
 
-        <div className="nav-bar-option" onClick={() => navigate("/create-playlist")}>
+        <div className="nav-bar-option" onClick={() => navigate("/")}>
         Create Playlist
         </div>
-        <div className="nav-bar-option" onClick={() => navigate("/favorites")}>
+        <div className="nav-bar-option" onClick={() => navigate("/")}>
         Favorites
         </div>
 

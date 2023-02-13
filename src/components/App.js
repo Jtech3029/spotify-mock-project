@@ -23,11 +23,17 @@ function App() {
   });
 
   async function play(songURL) {
-    if(!song) {
-    let thisSong = await getSong(songURL);
-    await setSong(thisSong);
-    thisSong.play();
+    if(song) song.pause();
+
+    if(songURL) {
+      let thisSong = await getSong(songURL);
+      await setSong(thisSong);
+      thisSong.play();
     }
+    else{
+      song.play();
+    }
+    setIsPlaying(true);
   }
 
   return (
@@ -39,11 +45,13 @@ function App() {
     <div>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage play={play}/>}/>
+        <Route path="/" element={<HomePage play={play} />}/>
         <Route path='/search' element={<Searchbar />}/>
       </Routes>
     </BrowserRouter>
-    <PlayBar />  
+    {isPlaying &&
+      <PlayBar song={song} play={() => song.play()} pause={() => song.pause()} isPlaying={isPlaying} setIsPlaying={setIsPlaying}/> 
+  } 
     </div>
     }
 
