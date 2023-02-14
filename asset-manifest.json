@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/spotify-mock-project/static/css/main.8e07b184.css",
+    "main.js": "/spotify-mock-project/static/js/main.81b8e3e7.js",
+    "static/media/GothamMedium.ttf": "/spotify-mock-project/static/media/GothamMedium.0a910c0b9d50be6aa3dc.ttf",
+    "static/media/green-play.png": "/spotify-mock-project/static/media/green-play.0e65287c1475ee3efd9b.png",
+    "static/media/GothamBold.ttf": "/spotify-mock-project/static/media/GothamBold.108854bb27dee2dce854.ttf",
+    "static/media/GothamBookItalic.ttf": "/spotify-mock-project/static/media/GothamBookItalic.3de1b843c5051c30b486.ttf",
+    "static/media/spotify-logo.jpg": "/spotify-mock-project/static/media/spotify-logo.4b8affa28e6282d1bf8d.jpg",
+    "index.html": "/spotify-mock-project/index.html",
+    "main.8e07b184.css.map": "/spotify-mock-project/static/css/main.8e07b184.css.map",
+    "main.81b8e3e7.js.map": "/spotify-mock-project/static/js/main.81b8e3e7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e07b184.css",
+    "static/js/main.81b8e3e7.js"
+  ]
+}
