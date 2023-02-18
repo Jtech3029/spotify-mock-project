@@ -1,5 +1,5 @@
 import '../styles/App.css';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  HashRouter, Route, Routes } from "react-router-dom";
 import HomePage from './HomePage';
 import { useState } from 'react';
 import PlayBar from './PlayBar';
@@ -42,20 +42,19 @@ function App() {
     }
     setIsPlaying(true);
   }
-
   return (
     <div>
     {user === null &&
     <Authentication />
     }
-    {user &&
+    {user !== null &&
       <div>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage play={play} />}/>
           <Route path='/search' element={<Searchbar />}/>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       {isPlaying &&
         <PlayBar song={song} play={() => song.play()} pause={() => song.pause()} isPlaying={isPlaying} finishedSong={finishedSong} setIsPlaying={setIsPlaying}/> 
       } 
